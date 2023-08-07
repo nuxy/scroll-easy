@@ -44,8 +44,11 @@ class ScrollTargetTrigger {
 
   /**
    * Scroll to an Element or document position when executed.
+   *
+   * @param {String} behavior
+   *   Scrolling event behavior (auto|instant|smooth).
    */
-  target() {
+  target(behavior = 'auto') {
     let targetPos = this.position;
 
     if (this.element) {
@@ -54,7 +57,7 @@ class ScrollTargetTrigger {
     }
 
     window.scrollTo({
-      behavior: 'smooth',
+      behavior,
       left: 0,
       top: targetPos
     });
