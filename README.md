@@ -41,6 +41,7 @@ The following methods are supported by this package:
 |-----------|-------------------------------------------------------------------|-----------------------|
 | `target`  | Scroll to an `Element` or `document` position _when executed_.    | auto, instant, smooth |
 | `trigger` | Run callback _when scrolled_ to `Element` or `document` position. | `Number` default: 100 |
+| `destroy` | Removes registered scroll event listener (`trigger` only).        |                       |
 
 ### Examples
 

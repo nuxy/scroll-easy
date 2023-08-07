@@ -15,6 +15,11 @@
 class ScrollTargetTrigger {
 
   /**
+   * @type {Function}
+   */
+  listener = null;
+
+  /**
    * @type {Boolean}
    */
   disabled = false;
@@ -73,7 +78,7 @@ class ScrollTargetTrigger {
    */
   trigger(threshold = 100) {
     if ((this.element || this.position) && this.callback) {
-      window.addEventListener('scroll', event => {
+      this.listener = event => {
         const scrollPos = event.view.scrollY;
 
         let targetPos = this.position;
@@ -90,7 +95,18 @@ class ScrollTargetTrigger {
         }
 
         this.callback(this.disabled);
-      });
+      };
+
+      window.addEventListener('scroll', this.listener);
+    }
+  }
+
+  /**
+   * Remove registered scroll event listener.
+   */
+  destroy() {
+    if (this.listener) {
+      window.removeEventListener('scroll', this.listener);
     }
   }
 }
