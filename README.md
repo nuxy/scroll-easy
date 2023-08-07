@@ -2,15 +2,6 @@
 
 Lightweight, dependency free, scroll event methods.
 
-## Methods
-
-The following methods are supported by this package:
-
-| Method    | Description                                                       |
-|-----------|-------------------------------------------------------------------|
-| `target`  | Scroll to an `Element` or `document` position _when executed_.    |
-| `trigger` | Run callback _when scrolled_ to `Element` or `document` position. |
-
 ## Dependencies
 
 - [Node.js](https://nodejs.org)
@@ -27,7 +18,7 @@ After you [build the distribution sources](#cli-options) the set-up is fairly si
 <script type="text/javascript" src="path/to/scroll-target-trigger.min.js"></script>
 
 <script type="text/javascript">
-  scrollTargetTrigger(element | position, callback).trigger();
+  scrollTargetTrigger(element | position, callback).trigger(threshold);
 </script>
 ```
 
@@ -39,8 +30,17 @@ If your using a modern framework like [Aurelia](https://aurelia.io), [Angular](h
 import ScrollTargetTrigger from 'scroll-target-trigger';
 
 const scroll = new ScrollTargetTrigger(element | position, callback);
-scroll.trigger();
+scroll.target(behavior);
 ```
+
+## Methods
+
+The following methods are supported by this package:
+
+| Method    | Description                                                       |
+|-----------|-------------------------------------------------------------------|
+| `target`  | Scroll to an `Element` or `document` position _when executed_.    |
+| `trigger` | Run callback _when scrolled_ to `Element` or `document` position. |
 
 ## Developers
 
