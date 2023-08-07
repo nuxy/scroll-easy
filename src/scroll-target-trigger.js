@@ -82,10 +82,11 @@ class ScrollTargetTrigger {
 
         if (scrollPos >= targetPos && this.disabled === false) {
           this.disabled = true;
-          this.callback();
         } else if (scrollPos <= (targetPos - threshold)) {
           this.disabled = false;
         }
+
+        this.callback(this.disabled);
       });
     }
   }
