@@ -37,30 +37,30 @@ scroll.target(behavior);
 
 The following methods are supported by this package:
 
-| Method    | Description                                                       | Argument              |
+| Method    | Description                                                       | Argument (optional)   |
 |-----------|-------------------------------------------------------------------|-----------------------|
 | `target`  | Scroll to an `Element` or `document` position _when executed_.    | auto, instant, smooth |
-| `trigger` | Run callback _when scrolled_ to `Element` or `document` position. | `Number`              |
+| `trigger` | Run callback _when scrolled_ to `Element` or `document` position. | `Number` default: 100 |
 
 ### Examples
 
-Add a class name to `Element` when scrolled to position.
+Add a class name to an `Element` when scrolled to position.
 
 ```javascript
 const elm = document.getElementById('target');
 
 scrollTargetTrigger(elm, function(active) {
   if (active) {
-    el.classList.add('triggered');
+    elm.classList.add('triggered');
   } else {
 
-    // Remove at 100px above target.
-    el.classList.remove('triggered');
+    // Remove at 100px above 'target'
+    elm.classList.remove('triggered');
   }
 }).trigger(100);
 ```
 
-Scroll to an `Element` instantly in a single jump.
+Scroll to an `Element` position instantly in a single jump.
 
 ```javascript
 const elm = document.getElementById('target');
