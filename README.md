@@ -99,6 +99,19 @@ Run [WebdriverIO](https://webdriver.io) E2E tests:
 
     $ npm run test
 
+## Motivation
+
+In the sea of NPM [packages related to scroll events](https://www.npmjs.com/search?q=scroll-event), many of the packages I evaluated are..
+
+- Unsupported, or have been completely abandoned.
+- Tightly coupled with the [jQuery](https://jquery.com) or `<insert SPA framework here>`.
+- Contain unnecessary usage of 3rd-party dependencies.
+- Rich with features, but limited callback support.
+
+In the end, I wanted a single library, no dependencies, with a simple interface (no bells and whistles) that provides `target` and `trigger` event handlers with callback support.
+
+My search fell short so I created this package.
+
 ## Contributions
 
 If you fix a bug, or have a code you want to contribute, please send a pull-request with your changes. (Note: Before committing your code please ensure that you are following the [Node.js style guide](https://github.com/felixge/node-style-guide))
