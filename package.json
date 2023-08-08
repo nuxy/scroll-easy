@@ -8,7 +8,7 @@
     "lint": "eslint --ignore-path .gitignore src",
     "minify-js": "node-minify --compressor uglify-js --input 'dist/scroll-target-trigger.js' --output 'dist/scroll-target-trigger.min.js'",
     "prepack": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "wdio wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -40,9 +40,11 @@
     "@babel/register": "^7.17.7",
     "@node-minify/cli": "^6.2.0",
     "@node-minify/uglify-js": "^4.0.5",
+    "@wdio/cli": "^8.8.8",
+    "@wdio/local-runner": "^8.8.8",
+    "@wdio/mocha-framework": "^8.8.7",
+    "@wdio/selenium-standalone-service": "^8.8.7",
+    "@wdio/spec-reporter": "^8.8.7",
     "eslint": "^8.18.0"
-  },
-  "overrides": {
-    "got": "^12.0.0"
   }
 }

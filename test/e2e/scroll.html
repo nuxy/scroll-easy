@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <script type="text/javascript" src="../../dist/scroll-target-trigger.min.js"></script>
+    <script>
+      window.onload = function() {
+        var output = document.getElementById('output');
+
+        // Targets.
+        window.addEventListener('test1', () => {
+          scrollTargetTrigger(500, () => {
+            output.innerText = 'target: 500px';
+          }).target();
+        });
+
+        window.addEventListener('test2', () => {
+          var target = document.getElementById('test-elm-2');
+          scrollTargetTrigger(target, () => {
+            output.innerText = 'target: 800px';
+          }).target();
+        });
+
+        // Triggers.
+        window.addEventListener('test3', () => {
+          var scroll = scrollTargetTrigger(1200, () => {
+            output.innerText = 'trigger: 1200px';
+            scroll.destroy();
+          }).trigger();
+        });
+
+        window.addEventListener('test4', () => {
+          var target = document.getElementById('test-elm-4');
+          var scroll = scrollTargetTrigger(target, () => {
+            output.innerText = 'trigger: 1600px';
+            scroll.destroy();
+          }).trigger();
+        });
+
+        // .. w/ threshold.
+        window.addEventListener('test5', () => {
+          var scroll = scrollTargetTrigger(2000, () => {
+            output.innerText = 'trigger: 2000px';
+            scroll.destroy();
+          }).trigger(100);
+        });
+      };
+    </script>
+
+    <style>
+    body {
+      height: 3000px;
+      margin: 0;
+      width: 100%;
+    }
+
+    #test-elm-1 {
+      background-color: red;
+      top: 500px;
+    }
+
+    #test-elm-1 span {
+      color: red;
+    }
+
+    #test-elm-2 {
+      background-color: yellow;
+      top: 800px;
+    }
+
+    #test-elm-2 span {
+      color: yellow;
+    }
+
+    #test-elm-3 {
+      background-color: green;
+      top: 1200px;
+    }
+
+    #test-elm-3 span {
+      color: green;
+    }
+
+    #test-elm-4 {
+      background-color: black;
+      top: 1600px;
+    }
+
+    #test-elm-4 span {
+      color: black;
+    }
+
+    .test-elm {
+      height: 2px;
+      position: absolute;
+      width: 100%;
+    }
+
+    .test-elm span {
+      display: block;
+      margin: 5px;
+    }
+    </style>
+
+    <title>Lightweight, dependency free, scroll event methods | Scroll Target Trigger</title>
+  </head>
+  <body>
+    <div id="output"></div>
+
+    <div id="test-elm-1" class="test-elm">
+      <span>500px</span>
+    </div>
+
+    <div id="test-elm-2" class="test-elm">
+      <span>800px</span>
+    </div>
+
+    <div id="test-elm-3" class="test-elm">
+      <span>1200px</span>
+    </div>
+
+    <div id="test-elm-4" class="test-elm">
+      <span>1600px</span>
+    </div>
+  </body>
+</html>

@@ -89,6 +89,10 @@ Transpile ES6 sources (using [Babel](https://babeljs.io)) and minify to a distri
 
     $ npm run build
 
+Run [WebdriverIO](https://webdriver.io) E2E tests:
+
+    $ npm run test
+
 ## Contributions
 
 If you fix a bug, or have a code you want to contribute, please send a pull-request with your changes. (Note: Before committing your code please ensure that you are following the [Node.js style guide](https://github.com/felixge/node-style-guide))
