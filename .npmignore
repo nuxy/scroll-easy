@@ -1,6 +1,9 @@
 .babelrc
 .eslintrc
+.travis.yml
 .vscode
+ISSUE_TEMPLATE.md
 package.*
 node_modules
 test
+wdio.conf.js
