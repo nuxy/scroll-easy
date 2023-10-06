@@ -61,13 +61,22 @@ class ScrollTargetTrigger {
       targetPos = rect.top;
     }
 
+    // Perform action on scroll event.
+    this.listener = event => {
+      const scrollPos = event.view.scrollY;
+
+      if (scrollPos === targetPos && this.callback) {
+        this.callback();
+      }
+    };
+
+    window.addEventListener('scroll', this.listener);
+
     window.scrollTo({
       behavior,
       left: 0,
       top: targetPos
     });
-
-    this.callback && this.callback();
   }
 
   /**
@@ -78,6 +87,8 @@ class ScrollTargetTrigger {
    */
   trigger(threshold = 100) {
     if ((this.element || this.position) && this.callback) {
+
+      // Perform action on scroll event.
       this.listener = event => {
         const scrollPos = event.view.scrollY;
 
