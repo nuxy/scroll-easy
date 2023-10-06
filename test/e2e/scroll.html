@@ -10,39 +10,47 @@
 
         // Targets.
         window.addEventListener('test1', () => {
-          scrollTargetTrigger(500, () => {
+          scrollTargetTrigger(500, function() {
             output.innerText = 'target: 500px';
+
+            this.destroy();
           }).target();
         });
 
         window.addEventListener('test2', () => {
           var target = document.getElementById('test-elm-2');
-          scrollTargetTrigger(target, () => {
+
+          scrollTargetTrigger(target, function() {
             output.innerText = 'target: 800px';
+
+            this.destroy();
           }).target();
         });
 
         // Triggers.
         window.addEventListener('test3', () => {
-          var scroll = scrollTargetTrigger(1200, () => {
+          var scroll = scrollTargetTrigger(1200, function() {
             output.innerText = 'trigger: 1200px';
-            scroll.destroy();
+
+            this.destroy();
           }).trigger();
         });
 
         window.addEventListener('test4', () => {
           var target = document.getElementById('test-elm-4');
-          var scroll = scrollTargetTrigger(target, () => {
+          var scroll = scrollTargetTrigger(target, function() {
             output.innerText = 'trigger: 1600px';
-            scroll.destroy();
+
+            this.destroy();
           }).trigger();
         });
 
         // .. w/ threshold.
         window.addEventListener('test5', () => {
-          var scroll = scrollTargetTrigger(2000, () => {
+          var scroll = scrollTargetTrigger(2000, function() {
             output.innerText = 'trigger: 2000px';
-            scroll.destroy();
+
+            this.destroy();
           }).trigger(100);
         });
       };
