@@ -1,4 +1,6 @@
-# Scroll Target Trigger [![npm version](https://badge.fury.io/js/scroll-target-trigger.svg)](https://badge.fury.io/js/scroll-target-trigger) [![](https://img.shields.io/npm/dm/scroll-target-trigger)](https://www.npmjs.com/package/scroll-target-trigger) [![Build Status](https://api.travis-ci.com/nuxy/scroll-target-trigger.svg?branch=master)](https://app.travis-ci.com/github/nuxy/scroll-target-trigger) [![Install size](https://packagephobia.com/badge?p=scroll-target-trigger)](https://packagephobia.com/result?p=scroll-target-trigger)
+# Scroll Target Trigger
+
+[![npm version](https://badge.fury.io/js/scroll-target-trigger.svg)](https://badge.fury.io/js/scroll-target-trigger) [![](https://img.shields.io/npm/dm/scroll-target-trigger)](https://www.npmjs.com/package/scroll-target-trigger) [![Build Status](https://api.travis-ci.com/nuxy/scroll-target-trigger.svg?branch=master)](https://app.travis-ci.com/github/nuxy/scroll-target-trigger) [![Install size](https://packagephobia.com/badge?p=scroll-target-trigger)](https://packagephobia.com/result?p=scroll-target-trigger) [![](https://img.shields.io/github/v/release/nuxy/scroll-target-trigger)](https://github.com/nuxy/scroll-target-trigger/releases)
 
 Lightweight, dependency free, scroll event methods.
 
