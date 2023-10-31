@@ -10,3 +10,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) a
 
 - Replaced/removed deprecated dependencies
 - Accurately trigger "target" callback
+
+## [0.1.1] 2013-10-31
+
+### Updated
+
+- Upgraded outdated NPM packages (devDependencies)
