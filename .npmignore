@@ -1,6 +1,6 @@
 .babelrc
 .eslintrc
-.travis.yml
+.github
 .vscode
 ISSUE_TEMPLATE.md
 package.*
