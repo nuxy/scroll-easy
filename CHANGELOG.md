@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) a
 - Replaced/removed deprecated dependencies
 - Accurately trigger "target" callback
 
-## [0.1.1] 2013-10-31
+## [0.1.1] 2023-10-31
 
 ### Updated
 
@@ -24,3 +24,7 @@ NPM security update ([CVE-2023-42282](https://github.com/advisories/GHSA-78xj-cg
 ### Updated
 
 - Replaced Travis-CI with Github workflow
+
+## [0.1.3] 2024-08-04
+  
+- NPM security updates ([ws override](https://github.com/advisories/GHSA-3h5v-q93c-6h6q))
